@@ -29,7 +29,7 @@ func main() {
 
 	dbURL := os.Getenv("DB_URL")
 	if dbURL == "" {
-		log.Fatal("PORT is not found in the environment")
+		log.Fatal("DB_URL is not found in the environment")
 	}
 
 	conn, err := sql.Open("postgres", dbURL)
@@ -38,7 +38,7 @@ func main() {
 	}
 
 	db := database.New(conn)
-	apiCfg := apiConfig {
+	apiCfg := apiConfig{
 		DB: db,
 	}
 
@@ -70,11 +70,10 @@ func main() {
 	v1Router.Get("/feed_follows", apiCfg.middlewareAuth(apiCfg.handlerGetFeedFollows))
 	v1Router.Delete("/feed_follows/{feedFollowID}", apiCfg.middlewareAuth(apiCfg.handlerDeleteFeedFollow))
 
-
 	router.Mount("/v1", v1Router)
 
 	srv := &http.Server{
-		Handler: router, 
+		Handler: router,
 		Addr: ":" + portString,
 	}
 
