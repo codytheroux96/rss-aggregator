@@ -6,6 +6,7 @@ A live server and RSS aggregator built with Golang and PostgreSQL. Users can sub
 ## Technologies
 - Go(Golang)
 - PostgreSQL
+- Chi
 - SQLc
 - Goose
 - CORS
@@ -17,3 +18,7 @@ A live server and RSS aggregator built with Golang and PostgreSQL. Users can sub
 - Once these are downloaded, clone this repository and then cd into it
 
 ## Usage
+
+
+## Notice Anything?
+Please feel free to reach out or make a PR if this application leaves anything to be desired, does not work properly for you, or you would like to see additional features
