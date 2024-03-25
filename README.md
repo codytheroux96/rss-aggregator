@@ -1,7 +1,7 @@
 # RSS Aggregator
 
 ## Description
-A live server and RSS aggregator built with Golang and PostgreSQL. Users can subscribe to different RSS feeds via that websites URL and using Go Channels, the RSS aggregator will scrape the feeds from these websites every 60 seconds (can be adjusted) and display all of the different RSS feeds available and their contents. This project takes security precautions by generating a random API key for every user as well as utilizing CORS. 
+A live server and RSS aggregator built with Go and PostgreSQL. Users can subscribe to different RSS feeds via that websites URL and using Go Channels, the RSS aggregator will scrape the feeds from these websites every 60 seconds (can be adjusted) and display all of the different RSS feeds available and their contents. This project takes security precautions by generating a random API key for every user as well as utilizing CORS. 
 
 ## Technologies
 - Go(Golang)
